@@ -33,7 +33,7 @@ function sendEmail(req, res) {
 
     const mailOptions = {
         from: process.env.EMAIL_USER,
-        to: 'lokeshkumarreddy.c@gmail.com',
+        to: process.env.RECIEVER_MAIL,
         subject: `You got a message from ${name}`,
         html: `<h4>Hello, Someone Contacted you through contact Form</h4>
         <h4>Name: ${name}</h4>
