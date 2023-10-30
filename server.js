@@ -1,10 +1,6 @@
 import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
-import morgan from './morgan.js';
-import cookieParser from "cookie-parser";
-import compression from "compression";
-import methodOverride from "method-override";
 import nodemailer from 'nodemailer';
 import { config } from "dotenv";
 config()
@@ -12,11 +8,6 @@ config()
 const app = express();
 app.use(bodyParser.json({ limit: "100mb" }));
 app.use(bodyParser.urlencoded({ limit: "100mb", extended: true }));
-app.use(morgan.successHandler);
-app.use(morgan.errorHandler);
-app.use(cookieParser());
-app.use(compression());
-app.use(methodOverride());
 app.use(cors({credentials:true}));
 
 
