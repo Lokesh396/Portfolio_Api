@@ -54,6 +54,10 @@ function sendEmail(req, res) {
     });
 }
 
+app.get('/', (req, res)=>{
+    res.send("This is my api running!")
+})
+
 app.post('/contact', (req, res) => {
     sendEmail(req, res);
 });
