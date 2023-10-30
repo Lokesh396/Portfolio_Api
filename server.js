@@ -2,8 +2,8 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import nodemailer from 'nodemailer';
-import { config } from "dotenv";
-config()
+import dotenv from "dotenv";
+dotenv.config()
 
 const app = express();
 app.use(bodyParser.json({ limit: "100mb" }));
