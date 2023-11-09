@@ -100,18 +100,18 @@ function sendMorningMail(req, res) {
   });
 }
 
-// cron.schedule("46 6 * * *", sendMorningMail, {
-//   scheduled: true,
-//   timezone: "Asia/Kolkata",
-// });
+cron.schedule("15 10 * * *", sendMorningMail, {
+  scheduled: true,
+  timezone: "Asia/Kolkata",
+});
 
 app.get("/", (req, res) => {
   res.send("This is my api running!");
 });
 
-app.get("/morningMotivation", (req, res) => {
-  sendMorningMail(req, res);
-});
+// app.get("/morningMotivation", (req, res) => {
+//   sendMorningMail(req, res);
+// });
 app.post("/contact", (req, res) => {
   sendEmail(req, res);
 });
