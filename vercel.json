@@ -14,7 +14,7 @@
     ],
     "crons": [{
       "path": "/morningMotivation",
-      "schedule": "56 6 * * *"
+      "schedule": "10 7 * * *"
     }]
   
   }
