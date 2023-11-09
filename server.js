@@ -45,6 +45,7 @@ function sendEmail(req, res) {
 }
 
 function sendMorningMail() {
+  console.log("Morning mail was initiated");
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: process.env.RECIEVER_MAIL,
@@ -99,9 +100,9 @@ function sendMorningMail() {
   });
 }
 
-cron.schedule("59 5 * * *", sendMorningMail, {
+cron.schedule("46 6 * * *", sendMorningMail, {
   scheduled: true,
-  timezone: "IST",
+  timezone: "Asia/Kolkata",
 });
 
 app.get("/", (req, res) => {
