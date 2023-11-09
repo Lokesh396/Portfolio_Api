@@ -44,7 +44,7 @@ function sendEmail(req, res) {
   });
 }
 
-function sendMorningMail() {
+function sendMorningMail(req, res) {
   console.log("Morning mail was initiated");
   const mailOptions = {
     from: process.env.EMAIL_USER,
@@ -100,15 +100,18 @@ function sendMorningMail() {
   });
 }
 
-cron.schedule("46 6 * * *", sendMorningMail, {
-  scheduled: true,
-  timezone: "Asia/Kolkata",
-});
+// cron.schedule("46 6 * * *", sendMorningMail, {
+//   scheduled: true,
+//   timezone: "Asia/Kolkata",
+// });
 
 app.get("/", (req, res) => {
   res.send("This is my api running!");
 });
 
+app.get("/morningMotivation", (req, res) => {
+  sendMorningMail(req, res);
+});
 app.post("/contact", (req, res) => {
   sendEmail(req, res);
 });
