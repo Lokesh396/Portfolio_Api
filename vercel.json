@@ -11,5 +11,10 @@
         "src": "/(.*)",
         "dest": "server.js"
       }
-    ]
+    ],
+    "crons": [{
+      "path": "/morningMotivation",
+      "schedule": "30 12 * * *"
+    }]
+  
   }

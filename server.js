@@ -109,9 +109,9 @@ app.get("/", (req, res) => {
   res.send("This is my api running!");
 });
 
-// app.get("/morningMotivation", (req, res) => {
-//   sendMorningMail(req, res);
-// });
+app.get("/morningMotivation", (req, res) => {
+  sendMorningMail(req, res);
+});
 app.post("/contact", (req, res) => {
   sendEmail(req, res);
 });
