@@ -59,6 +59,11 @@ function sendMorningMail(req, res) {
       <liI will complete the work todayli>
       <li>I breath confidence and I release hatred, bad thoughts</li>
     </ul>
+    <h4>
+    Universe I am open and ready for you to start working in my favor to make all my dreams come true and I request
+    for a clear sign in my reality to come to me today.
+    I am open, I am ready, Thank you,
+    </h4>
     <h4>Personal Constitution</h4>
       <h3>
         At work
